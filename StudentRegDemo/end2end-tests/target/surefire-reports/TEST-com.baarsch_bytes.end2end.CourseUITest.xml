@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.baarsch_bytes.end2end.CourseUITest" time="18.795" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.baarsch_bytes.end2end.CourseUITest" time="36.009" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/connorknowles/Library/Java/JavaVirtualMachines/openjdk-25.0.2/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414114146520_3.jar /Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire 2026-04-14T11-41-46_495-jvmRun1 surefire-20260414114146520_1tmp surefire_0-20260414114146520_2tmp"/>
+    <property name="sun.java.command" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414134107772_3.jar /Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire 2026-04-14T13-41-07_747-jvmRun1 surefire-20260414134107772_1tmp surefire_0-20260414134107772_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="CourseUITest"/>
@@ -26,12 +26,12 @@
     <property name="java.home" value="/Users/connorknowles/Library/Java/JavaVirtualMachines/openjdk-25.0.2/Contents/Home"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests"/>
-    <property name="java.vm.compressedOopsMode" value="Non-zero based"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414114146520_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414134107772_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25.0.2+10-69"/>
@@ -60,43 +60,93 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="createCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.213">
-    <system-err><![CDATA[Apr 14, 2026 11:41:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.518">
+    <system-err><![CDATA[Apr 14, 2026 1:41:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createLowerBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.937">
-    <system-err><![CDATA[Apr 14, 2026 11:41:49 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createLowerBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.79">
+    <system-err><![CDATA[Apr 14, 2026 1:41:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createUpperBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.831">
-    <system-err><![CDATA[Apr 14, 2026 11:41:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createUpperBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.927">
+    <system-err><![CDATA[Apr 14, 2026 1:41:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createLowerBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.958">
-    <system-err><![CDATA[Apr 14, 2026 11:41:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createLowerBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.803">
+    <system-err><![CDATA[Apr 14, 2026 1:41:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createUpperBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.913">
-    <system-err><![CDATA[Apr 14, 2026 11:41:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createUpperBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.97">
+    <system-err><![CDATA[Apr 14, 2026 1:41:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createLowerBoundMazSize" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.939">
-    <system-err><![CDATA[Apr 14, 2026 11:41:59 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createLowerBoundMazSize" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.896">
+    <system-err><![CDATA[Apr 14, 2026 1:41:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createLowerBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.929">
-    <system-err><![CDATA[Apr 14, 2026 11:42:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createBelowLowerBoundMaxSize" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.875">
+    <system-err><![CDATA[Apr 14, 2026 1:41:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>
-  <testcase name="createUpperBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="3.067">
-    <system-err><![CDATA[Apr 14, 2026 11:42:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createLowerBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.426">
+    <system-err><![CDATA[Apr 14, 2026 1:41:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createUpperBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.559">
+    <system-err><![CDATA[Apr 14, 2026 1:41:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createCourseMissingName" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.85">
+    <system-err><![CDATA[Apr 14, 2026 1:41:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createCourseMissingInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.85">
+    <system-err><![CDATA[Apr 14, 2026 1:41:29 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createCourseMissingMaxSize" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.882">
+    <system-err><![CDATA[Apr 14, 2026 1:41:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createCourseMissingRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.87">
+    <system-err><![CDATA[Apr 14, 2026 1:41:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="addStudentToCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.735">
+    <system-err><![CDATA[Apr 14, 2026 1:41:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="addStudentToFullCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.72">
+    <system-err><![CDATA[Apr 14, 2026 1:41:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="removeStudentFromCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.779">
+    <system-err><![CDATA[Apr 14, 2026 1:41:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="deleteCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.207">
+    <system-err><![CDATA[Apr 14, 2026 1:41:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="editCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.342">
+    <system-err><![CDATA[Apr 14, 2026 1:41:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>

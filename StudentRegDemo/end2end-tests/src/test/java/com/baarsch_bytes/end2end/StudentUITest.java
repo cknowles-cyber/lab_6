@@ -155,10 +155,10 @@ public class StudentUITest {
         assertTrue(table.getText().contains("C"));
     }
 
-    /*@Test
+    @Test
     @Order(7)
     @DisplayName("Create student with upper bound name")
-    public void createValidStudentUpperBoundBoundName() {
+    public void createValidStudentUpperBoundName() {
         driver.get("http://localhost:5173/students");
 
         String c = "C".repeat(255);
@@ -166,9 +166,13 @@ public class StudentUITest {
 
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("student-list-table"), "C"));
 
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.id("student-list-table"), c
+        ));
+
         WebElement table = driver.findElement(By.id("student-list-table"));
         assertTrue(table.getText().contains(c));
-    }*/
+    }
 
     @Test
     @Order(8)
@@ -189,7 +193,7 @@ public class StudentUITest {
         assertEquals(orig_size, updated_size);
     }
 
-    /*@Test
+    @Test
     @Order(9)
     @DisplayName("Create student with value above upper bound name")
     public void createStudentAboveUpperBoundName() {
@@ -207,7 +211,7 @@ public class StudentUITest {
         int updated_size = driver.findElements(By.cssSelector("[id^='student-row-']")).size();
 
         assertEquals(orig_size, updated_size);
-    }*/
+    }
 
     @Test
     @Order(10)
@@ -253,7 +257,9 @@ public class StudentUITest {
                 By.cssSelector("[id^='edit-student-button']")
         ));
 
-        WebElement row = driver.findElement(By.cssSelector("[id^='student-row-']"));
+        WebElement row = driver.findElement(
+                By.xpath("(//tr[starts-with(@id,'student-row-')])[2]")
+        );
 
         row.findElement(By.id("edit-student-button")).click();
 

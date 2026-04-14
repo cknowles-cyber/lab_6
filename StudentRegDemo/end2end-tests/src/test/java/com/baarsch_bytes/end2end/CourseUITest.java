@@ -23,6 +23,8 @@ import org.openqa.selenium.WebElement;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.openqa.selenium.support.ui.Select;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class CourseUITest {
@@ -70,7 +72,8 @@ public class CourseUITest {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("new-course-name")));
 
-        addCourse("Computer Science", "Jones Bell", "30", "101");
+        //addCourse("Accounting", "Jones Bell", "1", "101"); //for testing purporse later on
+        addCourse("Computer Science", "Jones Bell", "1", "101");
 
         WebElement table = driver.findElement(By.id("course-list-table"));
 
@@ -99,7 +102,7 @@ public class CourseUITest {
 
         wait.until(ExpectedConditions.textToBePresentInElementLocated(
                 By.id("course-list-table"),
-                "Computer Science"
+                "C"
         ));
 
         assertTrue(table.getText().contains("C"));
@@ -123,7 +126,7 @@ public class CourseUITest {
 
         wait.until(ExpectedConditions.textToBePresentInElementLocated(
                 By.id("course-list-table"),
-                "Computer Science"
+                c
         ));
 
         assertTrue(table.getText().contains(c));
@@ -196,9 +199,10 @@ public class CourseUITest {
                 "1"
         ));
 
-        assertTrue(table.getText().contains("C"));
+        assertTrue(table.getText().contains("1"));
     }
 
+    @Test
     @Order(7)
     @DisplayName("Create a course with value below lower bound max size")
     public void createBelowLowerBoundMaxSize() {
@@ -214,13 +218,6 @@ public class CourseUITest {
         addCourse("Computer Science", "Jones Bell", "-1", "105");
 
         int updated_size = driver.findElements(By.cssSelector("[id^='course-row-']")).size();
-
-        WebElement table = driver.findElement(By.id("course-list-table"));
-
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.id("course-list-table"),
-                "105"
-        ));
 
         assertEquals(orig_size, updated_size);
     }
@@ -249,7 +246,7 @@ public class CourseUITest {
     }
 
     @Test
-    @Order(8)
+    @Order(9)
     @DisplayName("Create a course with upper bound room")
     public void createUpperBoundRoom() {
         driver.get("http://localhost:5173");
@@ -272,7 +269,8 @@ public class CourseUITest {
         assertTrue(table.getText().contains(l));
     }
 
-    @Order(8)
+    @Test
+    @Order(10)
     @DisplayName("Create a course with missing name")
     public void createCourseMissingName() {
         driver.get("http://localhost:5173");
@@ -288,17 +286,11 @@ public class CourseUITest {
 
         int updated_size = driver.findElements(By.cssSelector("[id^='course-row-']")).size();
 
-        WebElement table = driver.findElement(By.id("course-list-table"));
-
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.id("course-list-table"),
-                "104"
-        ));
-
         assertEquals(orig_size, updated_size);
     }
 
-    @Order(9)
+    @Test
+    @Order(11)
     @DisplayName("Create a course with missing instructor")
     public void createCourseMissingInstructor() {
         driver.get("http://localhost:5173");
@@ -314,17 +306,12 @@ public class CourseUITest {
 
         int updated_size = driver.findElements(By.cssSelector("[id^='course-row-']")).size();
 
-        WebElement table = driver.findElement(By.id("course-list-table"));
-
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.id("course-list-table"),
-                "103"
-        ));
 
         assertEquals(orig_size, updated_size);
     }
 
-    @Order(9)
+    @Test
+    @Order(12)
     @DisplayName("Create a course with missing maxSize")
     public void createCourseMissingMaxSize() {
         driver.get("http://localhost:5173");
@@ -340,17 +327,11 @@ public class CourseUITest {
 
         int updated_size = driver.findElements(By.cssSelector("[id^='course-row-']")).size();
 
-        WebElement table = driver.findElement(By.id("course-list-table"));
-
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.id("course-list-table"),
-                "70"
-        ));
-
         assertEquals(orig_size, updated_size);
     }
 
-    @Order(10)
+    @Test
+    @Order(13)
     @DisplayName("Create a course with missing room")
     public void createCourseMissingRoom() {
         driver.get("http://localhost:5173");
@@ -366,14 +347,133 @@ public class CourseUITest {
 
         int updated_size = driver.findElements(By.cssSelector("[id^='course-row-']")).size();
 
+        assertEquals(orig_size, updated_size);
+    }
+
+    @Test
+    @Order(14)
+    @DisplayName("Add student to course")
+    public void addStudentToCourse() {
+        driver.get("http://localhost:5173");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-course-list-link")));
+        driver.findElement(By.id("nav-course-list-link")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("new-course-name")));
+
         WebElement table = driver.findElement(By.id("course-list-table"));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("select-student")));
+
+        WebElement dropdown = driver.findElement(By.id("select-student"));
+
+        dropdown.click();
+        dropdown.findElement(By.xpath("//option[contains(text(),'Mike Barnes')]")).click();
+
+        driver.findElement(By.id("add-student-button")).click();
 
         wait.until(ExpectedConditions.textToBePresentInElementLocated(
                 By.id("course-list-table"),
-                "35"
+                "Mike Barnes"
         ));
 
-        assertEquals(orig_size, updated_size);
+        assertTrue(table.getText().contains("Mike Barnes"));
+    }
+
+    @Test
+    @Order(15)
+    @DisplayName("Add student to full course")
+    public void addStudentToFullCourse() {
+        driver.get("http://localhost:5173");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-course-list-link")));
+        driver.findElement(By.id("nav-course-list-link")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("select-student")));
+
+        WebElement dropdown = driver.findElement(By.id("select-student"));
+        dropdown.click();
+        dropdown.findElement(By.xpath("//option[contains(text(),'John Smith')]")).click();
+
+        driver.findElement(By.id("add-student-button")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("course-roster-1")));
+
+        WebElement roster = driver.findElement(By.id("course-roster-1"));
+        assertFalse(roster.getText().contains("John Smith"));
+    }
+
+    @Test
+    @Order(16)
+    @DisplayName("Remove student")
+    public void removeStudentFromCourse() {
+        driver.get("http://localhost:5173");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-course-list-link")));
+        driver.findElement(By.id("nav-course-list-link")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("course-list-table")));
+
+        driver.findElement(By.id("edit-course-button")).click();
+
+        Select removeSelect = new Select(
+                driver.findElement(By.id("remove-student-select"))
+        );
+
+        removeSelect.selectByVisibleText("Mike Barnes");
+
+        driver.findElement(By.id("remove-student-button")).click();
+        driver.findElement(By.id("edit-course-save-button")).click();
+
+        WebElement roster = driver.findElement(By.id("course-roster-1"));
+
+        assertFalse(roster.getText().contains("Mike Barnes"));
+    }
+
+    @Test
+    @Order(17)
+    @DisplayName("Delete course")
+    public void deleteCourse() {
+        driver.get("http://localhost:5173");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-course-list-link")));
+        driver.findElement(By.id("nav-course-list-link")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("course-list-table")));
+
+        driver.findElement(By.id("course-row-1"))
+                .findElement(By.id("delete-course-button"))
+                .click();
+
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("course-row-1")));
+    }
+
+    @Test
+    @Order(18)
+    @DisplayName("Edit course")
+    public void editCourse() {
+        driver.get("http://localhost:5173");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-course-list-link")));
+        driver.findElement(By.id("nav-course-list-link")).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("course-list-table")));
+
+        driver.findElement(By.id("course-row-1"))
+                .findElement(By.id("edit-course-button"))
+                .click();
+
+        WebElement name = driver.findElement(By.id("edit-course-name"));
+
+        name.clear();
+        name.sendKeys("Accounting");
+
+        driver.findElement(By.id("edit-course-save-button")).click();
+
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.id("course-name-1"),
+                "Accounting"
+        ));
     }
 
 }
