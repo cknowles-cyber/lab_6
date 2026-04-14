@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.baarsch_bytes.end2end.CourseUITest" time="11.555" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.baarsch_bytes.end2end.CourseUITest" time="18.795" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/connorknowles/Library/Java/JavaVirtualMachines/openjdk-25.0.2/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414070749097_3.jar /Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire 2026-04-14T07-07-49_071-jvmRun1 surefire-20260414070749097_1tmp surefire_0-20260414070749097_2tmp"/>
+    <property name="sun.java.command" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414114146520_3.jar /Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire 2026-04-14T11-41-46_495-jvmRun1 surefire-20260414114146520_1tmp surefire_0-20260414114146520_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="CourseUITest"/>
@@ -26,12 +26,12 @@
     <property name="java.home" value="/Users/connorknowles/Library/Java/JavaVirtualMachines/openjdk-25.0.2/Contents/Home"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.vm.compressedOopsMode" value="Non-zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414070749097_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/connorknowles/Documents/Software Testing/StudentRegDemo/end2end-tests/target/surefire/surefirebooter-20260414114146520_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25.0.2+10-69"/>
@@ -60,23 +60,43 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="createCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="11.548">
-    <error message="Expected condition failed: waiting for element found by By.id: courses-button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#courses\-button&quot;}.&#10;(tried for 10 seconds with 500 milliseconds interval)&#10;Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3&apos;, java.version: &apos;25.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/fd/xz9g5d097bn...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, goog:processID: 82478, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 07e5e5f5bc673ff859a660943e29e5aa" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for element found by By.id: courses-button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#courses\-button"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3', java.version: '25.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/fd/xz9g5d097bn...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, goog:processID: 82478, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 07e5e5f5bc673ff859a660943e29e5aa
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at com.baarsch_bytes.end2end.CourseUITest.createCourse(CourseUITest.java:68)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-    <system-err><![CDATA[Apr 14, 2026 7:07:50 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="createCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.213">
+    <system-err><![CDATA[Apr 14, 2026 11:41:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createLowerBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.937">
+    <system-err><![CDATA[Apr 14, 2026 11:41:49 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createUpperBoundCourse" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.831">
+    <system-err><![CDATA[Apr 14, 2026 11:41:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createLowerBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.958">
+    <system-err><![CDATA[Apr 14, 2026 11:41:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createUpperBoundInstructor" classname="com.baarsch_bytes.end2end.CourseUITest" time="2.913">
+    <system-err><![CDATA[Apr 14, 2026 11:41:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createLowerBoundMazSize" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.939">
+    <system-err><![CDATA[Apr 14, 2026 11:41:59 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createLowerBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="1.929">
+    <system-err><![CDATA[Apr 14, 2026 11:42:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="createUpperBoundRoom" classname="com.baarsch_bytes.end2end.CourseUITest" time="3.067">
+    <system-err><![CDATA[Apr 14, 2026 11:42:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
 ]]></system-err>
   </testcase>

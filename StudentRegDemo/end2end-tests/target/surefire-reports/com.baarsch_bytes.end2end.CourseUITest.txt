@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.baarsch_bytes.end2end.CourseUITest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.56 s <<< FAILURE! -- in com.baarsch_bytes.end2end.CourseUITest
-com.baarsch_bytes.end2end.CourseUITest.createCourse -- Time elapsed: 11.55 s <<< ERROR!
-org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for element found by By.id: courses-button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#courses\-button"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3', java.version: '25.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.56 (b28eac7a1a97..., userDataDir: /var/folders/fd/xz9g5d097bn...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, goog:processID: 82478, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 07e5e5f5bc673ff859a660943e29e5aa
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at com.baarsch_bytes.end2end.CourseUITest.createCourse(CourseUITest.java:68)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.80 s -- in com.baarsch_bytes.end2end.CourseUITest

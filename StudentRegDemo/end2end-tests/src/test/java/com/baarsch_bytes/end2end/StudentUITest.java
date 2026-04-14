@@ -167,7 +167,7 @@ public class StudentUITest {
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("student-list-table"), "C"));
 
         WebElement table = driver.findElement(By.id("student-list-table"));
-        assertTrue(table.getText().contains("C"));
+        assertTrue(table.getText().contains(c));
     }*/
 
     @Test
